@@ -182,3 +182,4 @@ Received Import Request.
 Start importing Packages/com.unity.collab-proxy/Editor/Assets/Icons/added-file-light.png using Guid(397fff6c3885f8343bb65714f0064b5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26ecb5fd7879bf60231f5d8c53b9c82d') in 0.034083 seconds
   Import took 0.041669 seconds .
 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
