@@ -21,12 +21,31 @@ public class CameraMgr : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.mouseScrollDelta.y != 0)
+        {
+            Vector3 diff = Vector3.forward * Input.mouseScrollDelta.y;
+
+            if (MainCamera.enabled)
+                MainCamera.transform.Translate(diff);
+
+            else if (SideViewCamera.enabled)
+                SideViewCamera.transform.Translate(diff);
+
+            else if (SplitScreenLower.enabled)
+                SplitScreenLower.transform.Translate(diff);
+        }
     }
     public void OnSliderValueChanged(float value)
     {
         Debug.LogFormat("Slider:{0}", value);
         // Code will go here
+
+        if (MainCamera.enabled)            
+            MainCamera.nearClipPlane = value;        
+        else if (SideViewCamera.enabled)            
+            SideViewCamera.nearClipPlane = value;        
+        else if (SplitScreenLower.enabled)            
+            SplitScreenLower.nearClipPlane = value;
     }
 
     public void SwitchViews(Dropdown change)
