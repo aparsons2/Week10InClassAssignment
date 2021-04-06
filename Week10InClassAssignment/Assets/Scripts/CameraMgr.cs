@@ -28,6 +28,10 @@ public class CameraMgr : MonoBehaviour
             if (MainCamera.enabled)
                 MainCamera.transform.Translate(diff);
 
+            if (mainCamera.enabled)
+                mainCamera.transform.Translate(diff);
+
+
             else if (SideViewCamera.enabled)
                 SideViewCamera.transform.Translate(diff);
 
